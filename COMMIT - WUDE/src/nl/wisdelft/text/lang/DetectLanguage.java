@@ -26,7 +26,7 @@ public final class DetectLanguage {
 	final static String outputDirectory = "/Users/oosterman/Documents/Data/userdocumentsNL";
 	final static String languageToMatch = "nl";
 
-	final static String profileDirectory = "/Users/oosterman/git/WUDE/WUDE/src/nl/wisdelft/text/lang/profiles";
+	final static String profileDirectory = "/Users/oosterman/git/WUDE/COMMIT - WUDE/src/nl/wisdelft/text/lang/profiles";
 	private static boolean initialized = false;
 
 	public static void main(String[] args) throws IOException, LangDetectException {
