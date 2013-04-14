@@ -17,5 +17,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry combineaccessrules="false" kind="src" path="/UserProfilesGAE"/>
+	<classpathentry kind="lib" path="postgresql-9.2-1002.jdbc4.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
