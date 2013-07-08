@@ -16,16 +16,17 @@ public class WikiPageStats {
 	public int nrRevisions;
 	public int minorRevisions;
 	public int majorRevisions;
-	public int averageChangePerRevision;
+	public int averageNrCharacterChangedPerRevision;
 	public int averageDiffDeletePerRevision;
 	public int averageDiffInsertPerRevision;
 	public int nrContributors;
+	public boolean isRedirect = false;
 	
 	public Readability readabilityCurrentVersion;
 	public WikiMarkupStats markupStatsCurrentVersion;
 	public TextStats textStatsCurrentVersion;
 	
-	public String toDelimitedStringHeader(String delimiter){
+	public static String toDelimitedStringHeader(String delimiter){
 		StringBuilder builder = new StringBuilder();
 		builder.append("title");
 		builder.append(delimiter);
@@ -37,7 +38,7 @@ public class WikiPageStats {
 		builder.append(delimiter);
 		builder.append("nrContributors");
 		builder.append(delimiter);
-		builder.append("avgChangePerRevision");
+		builder.append("avgNrCharsChangedPerRevision");
 		builder.append(delimiter);
 		builder.append("avgDiffDeletePerRevision");
 		builder.append(delimiter);
@@ -72,9 +73,9 @@ public class WikiPageStats {
 	
 	public String toDelimitedString(String delimiter){
 		StringBuilder builder = new StringBuilder();
-		builder.append("\"");
-		builder.append(title);
-		builder.append("\"");
+		//make sure we can parse the title
+		String formattedTitle = "\""+title.replace("\"", "'") +"\"";
+		builder.append(formattedTitle);
 		builder.append(delimiter);
 		builder.append(nrRevisions);
 		builder.append(delimiter);
@@ -84,7 +85,7 @@ public class WikiPageStats {
 		builder.append(delimiter);
 		builder.append(nrContributors);
 		builder.append(delimiter);
-		builder.append(averageChangePerRevision);
+		builder.append(averageNrCharacterChangedPerRevision);
 		builder.append(delimiter);
 		builder.append(averageDiffDeletePerRevision);
 		builder.append(delimiter);

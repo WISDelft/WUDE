@@ -105,10 +105,31 @@
 			<version>1.1</version>
 		</dependency>
 		<dependency>
-	<groupId>org.codehaus.woodstox</groupId>
-	<artifactId>wstx-asl</artifactId>
-	<version>4.0.6</version>
-</dependency>
-            
+			<groupId>org.apache.xmlgraphics</groupId>
+			<artifactId>fop</artifactId>
+			<version>1.1</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>avalon-framework-impl</artifactId>
+					<groupId>org.apache.avalon.framework</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>avalon-framework-api</artifactId>
+					<groupId>org.apache.avalon.framework</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.codehaus.woodstox</groupId>
+			<artifactId>stax2-api</artifactId>
+			<version>3.1.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.codehaus.woodstox</groupId>
+			<artifactId>wstx-asl</artifactId>
+			<version>4.0.0</version>
+		</dependency>
+
+
 	</dependencies>
 </project>

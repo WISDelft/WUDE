@@ -2,7 +2,6 @@
 <classpath>
 	<classpathentry kind="src" path="src/java"/>
 	<classpathentry kind="src" path="src/resources"/>
-	<classpathentry kind="src" path="src/test"/>
 	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>
@@ -18,6 +17,52 @@
 	<classpathentry kind="lib" path="libs/postgresql-9.2-1002.jdbc4.jar"/>
 	<classpathentry kind="lib" path="libs/hunspell.jar"/>
 	<classpathentry kind="lib" path="libs/jna.jar"/>
-	<classpathentry kind="lib" path="libs/hyphen.jar"/>
+	<classpathentry kind="lib" path="libs/fop-hyph.jar"/>
+	<classpathentry kind="lib" path="libs/avalon-framework-api-4.2.0.jar"/>
+	<classpathentry kind="lib" path="libs/avalon-framework-impl-4.2.0.jar"/>
+	<classpathentry kind="lib" path="libs/mturk/aws-mturk-dataschema.jar"/>
+	<classpathentry kind="lib" path="libs/mturk/aws-mturk-wsdl.jar"/>
+	<classpathentry kind="lib" path="libs/mturk/axis-ant.jar"/>
+	<classpathentry kind="lib" path="libs/mturk/axis.jar"/>
+	<classpathentry kind="lib" path="libs/mturk/commons-beanutils.jar"/>
+	<classpathentry kind="lib" path="libs/mturk/commons-codec-1.4.jar"/>
+	<classpathentry kind="lib" path="libs/mturk/commons-collections-3.2.jar"/>
+	<classpathentry kind="lib" path="libs/mturk/commons-collections-testframework-3.2.jar"/>
+	<classpathentry kind="lib" path="libs/mturk/commons-dbcp-1.2.2.jar"/>
+	<classpathentry kind="lib" path="libs/mturk/commons-digester-1.8.jar"/>
+	<classpathentry kind="lib" path="libs/mturk/commons-discovery-0.2.jar"/>
+	<classpathentry kind="lib" path="libs/mturk/commons-httpclient-3.1.jar"/>
+	<classpathentry kind="lib" path="libs/mturk/commons-httpclient-contrib-3.1.jar"/>
+	<classpathentry kind="lib" path="libs/mturk/commons-lang-2.3.jar"/>
+	<classpathentry kind="lib" path="libs/mturk/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="libs/mturk/commons-logging-api.jar"/>
+	<classpathentry kind="lib" path="libs/mturk/commons-logging.jar"/>
+	<classpathentry kind="lib" path="libs/mturk/commons-pool-1.3.jar"/>
+	<classpathentry kind="lib" path="libs/mturk/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="libs/mturk/geronimo-activation_1.0.2_spec-1.2.jar"/>
+	<classpathentry kind="lib" path="libs/mturk/geronimo-javamail_1.3.1_spec-1.3.jar"/>
+	<classpathentry kind="lib" path="libs/mturk/httpclient-4.1.2.jar"/>
+	<classpathentry kind="lib" path="libs/mturk/httpclient-cache-4.1.2.jar"/>
+	<classpathentry kind="lib" path="libs/mturk/httpcore-4.1.2.jar"/>
+	<classpathentry kind="lib" path="libs/mturk/httpmime-4.1.2.jar"/>
+	<classpathentry kind="lib" path="libs/mturk/java-aws-mturk.jar"/>
+	<classpathentry kind="lib" path="libs/mturk/jaxme2-0.5.2.jar"/>
+	<classpathentry kind="lib" path="libs/mturk/jaxme2-rt-0.5.2.jar"/>
+	<classpathentry kind="lib" path="libs/mturk/jaxmeapi-0.5.2.jar"/>
+	<classpathentry kind="lib" path="libs/mturk/jaxmejs-0.5.2.jar"/>
+	<classpathentry kind="lib" path="libs/mturk/jaxmepm-0.5.2.jar"/>
+	<classpathentry kind="lib" path="libs/mturk/jaxmexs-0.5.2.jar"/>
+	<classpathentry kind="lib" path="libs/mturk/jaxrpc.jar"/>
+	<classpathentry kind="lib" path="libs/mturk/log4j-1.2.15.jar"/>
+	<classpathentry kind="lib" path="libs/mturk/opencsv-1.8.jar"/>
+	<classpathentry kind="lib" path="libs/mturk/resolver.jar"/>
+	<classpathentry kind="lib" path="libs/mturk/saaj.jar"/>
+	<classpathentry kind="lib" path="libs/mturk/velocity-1.5.jar"/>
+	<classpathentry kind="lib" path="libs/mturk/velocity-tools-1.4.jar"/>
+	<classpathentry kind="lib" path="libs/mturk/wsdl4j.jar"/>
+	<classpathentry kind="lib" path="libs/mturk/wstx-asl-3.2.3.jar"/>
+	<classpathentry kind="lib" path="libs/mturk/xalan.jar"/>
+	<classpathentry kind="lib" path="libs/mturk/xercesImpl.jar"/>
+	<classpathentry kind="lib" path="libs/mturk/xml-apis.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

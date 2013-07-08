@@ -3,6 +3,9 @@
  */
 package nl.wisdelft.text;
 
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import nl.wisdelft.text.stats.WikiMarkupStats;
@@ -27,8 +30,12 @@ public class WikiMarkupAnalyzer {
 	private static Pattern boldItalicsPatter = java.util.regex.Pattern.compile("'''''[^']+'''''[^']");
 	private static Pattern boldPatterns = java.util.regex.Pattern.compile("'''[^']+'''[^']");
 	private static Pattern italicsPattern = java.util.regex.Pattern.compile("''[^']+''[^']");
-	
-	public static WikiMarkupStats analyse(String text){
+
+	public static final Set<String> specialPagePrefixDutch = new HashSet<String>(Arrays.asList(new String[] { "Media:", "Speciaal:", "Overleg:",
+			"Gebruiker:", "Overleg gebruiker:", "WikiDelft:", "Overleg WikiDelft:", "Bestand:", "Overleg bestand:", "MediaWiki:",
+			"Overleg MediaWiki:", "Sjabloon:", "Overleg sjabloon:", "Help:", "Overleg help:", "Categorie:", "Overleg categorie:" }));
+
+	public static WikiMarkupStats analyse(String text) {
 		// initialize the stats storage
 		WikiMarkupStats stats = new WikiMarkupStats();
 
@@ -99,4 +106,3 @@ public class WikiMarkupAnalyzer {
 	}
 
 }
-
