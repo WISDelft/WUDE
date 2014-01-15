@@ -4,9 +4,13 @@
 package nl.wisdelft;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
+import java.nio.MappedByteBuffer;
+import java.nio.channels.FileChannel;
+import java.nio.charset.Charset;
 import java.util.Properties;
 
 /**
@@ -76,6 +80,19 @@ public class WUDEUtil {
 
 	public static String getResourceFilePath(String resourceName) {
 		return getResourceFolder() + "/" + resourceName;
+	}
+	
+	public static String readFile(File file) throws IOException {
+		FileInputStream stream = new FileInputStream(file);
+		try {
+			FileChannel fc = stream.getChannel();
+			MappedByteBuffer bb = fc.map(FileChannel.MapMode.READ_ONLY, 0, fc.size());
+			/* Instead of using default, pass in a decoder. */
+			return Charset.defaultCharset().decode(bb).toString();
+		}
+		finally {
+			stream.close();
+		}
 	}
 
 }

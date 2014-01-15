@@ -1,5 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>COMMIT_WUDE</groupId>
 	<artifactId>COMMIT_WUDE</artifactId>
@@ -24,31 +24,18 @@
 	</repositories>
 	<build>
 		<sourceDirectory>src</sourceDirectory>
-		<resources>
-			<resource>
-				<directory>src</directory>
-				<excludes>
-					<exclude>**/*.java</exclude>
-				</excludes>
-			</resource>
-		</resources>
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.0</version>
 				<configuration>
-					<source />
-					<target />
+					<source/>
+					<target/>
 				</configuration>
 			</plugin>
 		</plugins>
 	</build>
 	<dependencies>
-		<dependency>
-			<groupId>org.apache.opennlp</groupId>
-			<artifactId>opennlp-tools</artifactId>
-			<version>1.5.3</version>
-		</dependency>
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>
@@ -71,11 +58,6 @@
 		</dependency>
 		<dependency>
 			<groupId>org.apache.solr</groupId>
-			<artifactId>solr-langid</artifactId>
-			<version>4.0.0</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.solr</groupId>
 			<artifactId>solr-core</artifactId>
 			<version>4.0.0</version>
 		</dependency>
@@ -93,6 +75,12 @@
 			<groupId>org.apache.ws.commons.util</groupId>
 			<artifactId>ws-commons-util</artifactId>
 			<version>1.0.2</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>junit</artifactId>
+					<groupId>junit</groupId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.xmlrpc</groupId>
@@ -105,21 +93,6 @@
 			<version>1.1</version>
 		</dependency>
 		<dependency>
-			<groupId>org.apache.xmlgraphics</groupId>
-			<artifactId>fop</artifactId>
-			<version>1.1</version>
-			<exclusions>
-				<exclusion>
-					<artifactId>avalon-framework-impl</artifactId>
-					<groupId>org.apache.avalon.framework</groupId>
-				</exclusion>
-				<exclusion>
-					<artifactId>avalon-framework-api</artifactId>
-					<groupId>org.apache.avalon.framework</groupId>
-				</exclusion>
-			</exclusions>
-		</dependency>
-		<dependency>
 			<groupId>org.codehaus.woodstox</groupId>
 			<artifactId>stax2-api</artifactId>
 			<version>3.1.1</version>
@@ -129,7 +102,11 @@
 			<artifactId>wstx-asl</artifactId>
 			<version>4.0.0</version>
 		</dependency>
-
-
 	</dependencies>
+	<packaging>pom</packaging>
+  <modules>
+    <module>twitter.gatherer</module>
+    
+    
+  </modules>
 </project>

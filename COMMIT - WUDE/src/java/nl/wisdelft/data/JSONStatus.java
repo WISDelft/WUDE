@@ -10,6 +10,7 @@ import twitter4j.MediaEntity;
 import twitter4j.Place;
 import twitter4j.RateLimitStatus;
 import twitter4j.Status;
+import twitter4j.SymbolEntity;
 import twitter4j.URLEntity;
 import twitter4j.User;
 import twitter4j.UserMentionEntity;
@@ -208,7 +209,7 @@ public class JSONStatus implements Status {
 	 * (non-Javadoc)
 	 * @see twitter4j.Status#getRetweetCount()
 	 */
-	public long getRetweetCount() {
+	public int getRetweetCount() {
 		return tweet.getRetweetCount();
 	}
 
@@ -269,7 +270,7 @@ public class JSONStatus implements Status {
 	/* (non-Javadoc)
 	 * @see twitter4j.Status#getFavoriteCount()
 	 */
-	public long getFavoriteCount() {
+	public int getFavoriteCount() {
 		return tweet.getFavoriteCount();
 	}
 
@@ -278,5 +279,12 @@ public class JSONStatus implements Status {
 	 */
 	public String getIsoLanguageCode() {
 		return tweet.getIsoLanguageCode();
+	}
+
+	/* (non-Javadoc)
+	 * @see twitter4j.EntitySupport#getSymbolEntities()
+	 */
+	public SymbolEntity[] getSymbolEntities() {
+		return tweet.getSymbolEntities();
 	}
 }
