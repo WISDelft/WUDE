@@ -3,6 +3,8 @@
  */
 package nl.wisdelft.wiki.analysis;
 
+import info.bliki.wiki.filter.PlainTextConverter;
+import info.bliki.wiki.model.WikiModel;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
@@ -24,8 +26,10 @@ public class WikiPageAnalyzer {
 			"Overleg:", "Gebruiker:", "Overleg gebruiker:", "WikiDelft:", "Overleg WikiDelft:", "Bestand:", "Overleg bestand:", "MediaWiki:",
 			"Overleg MediaWiki:", "Sjabloon:", "Overleg sjabloon:", "Help:", "Overleg help:", "Categorie:", "Overleg categorie:" }));
 
-	private WikiPageAnalyzer(){}
-	
+	private static WikiModel wikiModel = new WikiModel("http://wikidelft.nl/index.php?title=${image}", "http://wikidelft.nl/index.php?title=${title}");
+
+	private WikiPageAnalyzer() {}
+
 	public static boolean isSpecialPage(String title) {
 		// empty title
 		if (title == null || title.isEmpty()) return false;
@@ -35,6 +39,11 @@ public class WikiPageAnalyzer {
 		// does not match special pages prefixes
 		String prefix = title.substring(0, indexColon + 1);
 		return specialPagePrefixDutch.contains(prefix);
+	}
+
+	public static String getPlainTextContent(String wikiText){
+    String plainStr = wikiModel.render(new PlainTextConverter(), wikiText);
+    return plainStr;
 	}
 
 	public static WikiPageStats analyse(WikiPage page, Language lang) {
