@@ -10,7 +10,7 @@ The current components are:
 
 
 ## Datasets
-* 1,414,656 submissions from reddit (fetched August 2014, 382MB) (download)[https://github.com/WISDelft/WUDE/blob/master/data/reddit_submissions_august_2014_complete.csv.zip]
+* 1,414,656 submissions from reddit (fetched August 2014, 382MB) [download](https://github.com/WISDelft/WUDE/blob/master/data/reddit_submissions_august_2014_complete.csv.zip)
 
 ## Organization
 **Delft University of Technology** <br />
