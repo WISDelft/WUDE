@@ -10,7 +10,9 @@ The current components are:
 
 
 ## Datasets
-* 1,414,656 submissions from reddit (fetched August 2014, 382MB) [download](https://github.com/WISDelft/WUDE/blob/master/data/reddit_submissions_august_2014_complete.csv.zip)
+* 1,414,656 submissions from reddit (fetched August 2014, 382MB) [download](WUDE/data/reddit_submissions_august_2014_complete.csv.zip)
+* steve.museum dataset in RDF format enriched with ULAN, DBPedia and Flickr (7MB)[download](WUDE/data/enriched_stevemuseum_rdf.zip)
+      
 
 ## Organization
 **Delft University of Technology** <br />
@@ -19,9 +21,9 @@ The current components are:
 [Group] Web Information Systems<br />
 [Contact] j.e.g.oosterman@tudelft.nl <br />
 
-![tudelft](http://wisserver.st.ewi.tudelft.nl/github_files/TUD.png)
+![tudelft](http://www.wis.ewi.tudelft.nl/fileadmin/wis/images/TUDLogo.png)
 
 ##Acknowledgements
 This work was funded by the Dutch national program COMMIT
 
-![COMMIT](http://wisserver.st.ewi.tudelft.nl/github_files/COMMIT.png?)
+![COMMIT](https://www.commit-nl.nl/sites/default/files/logo.png)
