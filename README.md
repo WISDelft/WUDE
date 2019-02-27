@@ -12,7 +12,7 @@ The current components are:
 ## Datasets
 * 1,414,656 submissions from reddit (fetched August 2014, 382MB) [download](WUDE/data/reddit_submissions_august_2014_complete.csv.zip)
 * steve.museum dataset in RDF format enriched with ULAN, DBPedia and Flickr (7MB)[download](WUDE/data/enriched_stevemuseum_rdf.zip)
-      
+* Dataset supporting our contribution to the journal of Computer Networks Special Issue on Crowdsourcing. Paper: Crowdsourcing Visual Artwork Annotations in Cultural Heritage (<1MB) [download](WUDE/data/Dataset%20-%20Oosterman%20etal%20-%20Crowdsourcing%20Visual%20Artworks.zip)
 
 ## Organization
 **Delft University of Technology** <br />
